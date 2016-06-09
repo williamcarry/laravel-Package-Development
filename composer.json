@@ -7,6 +7,9 @@
             "email": "myinfo@laraveldaily.com"
         }
     ],
+    "autoload": {
+        "psr-4": {"Timezones\\": "src/"}
+    },
     "minimum-stability": "dev",
     "require": {}
 }

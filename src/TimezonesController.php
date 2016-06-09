@@ -12,7 +12,7 @@ class TimezonesController extends Controller
     public function index($locale="en",$timezone = NULL)
     {
         //获取配置文件
-        print_r(Config::get('Mylaraveldaily.file.myConfog'));die;
+//        print_r(Config::get('Mylaraveldaily.file.myConfog'));die;
         
          App::setLocale($locale);
          //翻译

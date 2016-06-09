@@ -15,31 +15,31 @@ class TimezonesServiceProvider extends ServiceProvider {
         /*
          * loadViewsFrom两个参数，package's name就是你自己起一个facade名称
          * the path to your view templates and your package's name
-         * 把所有文件 Mylaraveldaily\timezones\src\views 变成Facade的
+         * 把所有文件 src\views 变成Facade的
          * 例如以后调用view里面的模板可以用
          * timezones::time 
          * 就是调用了time.blade.php模板
          * 
          */
         $this->loadViewsFrom(__DIR__ . '/views', 'timezones');
-        /*
-         * 用 php artisan vendor:publish 命令
-         * 把模板放在resources/views/Mylaraveldaily/timezones
-         * 这样可以重写
-         * 其实在这里添加 $this->publishes 就行了
-         * 以后喜欢重写，自己去写
-         * 
-         * 注意一下两个却别
-         * base_path('resources/views/Mylaraveldaily/timezones')
-         * resource_path('views/Mylaraveldaily/timezones')
-         * 
-         * php artisan vendor:publish
-         */
+
         $this->publishes([
-            //模板
-            __DIR__ . '/views' => base_path('resources/views/Mylaraveldaily/timezones'),
+            /*
+             * 用 php artisan vendor:publish 命令
+             * 把模板放在resources/views/Mylaraveldaily/Timezones
+             * 这样可以重写
+             * 其实在这里添加 $this->publishes 就行了
+             * 以后喜欢重写，自己去写
+             * 
+             * 注意一下两个却别
+             * base_path('resources/views/Mylaraveldaily/Timezones')
+             * resource_path('views/Mylaraveldaily/Timezones')
+             * 
+             * php artisan vendor:publish
+             */
+            __DIR__ . '/views' => base_path('resources/views/Mylaraveldaily/Timezones'),
             //翻译，不知道这么写对不对
-            __DIR__ . '/translations' => base_path('resources/lang/Mylaraveldaily/timezones/trans'),
+            __DIR__ . '/translations' => base_path('resources/lang/Mylaraveldaily/Timezones/trans'),
             /*
              * 配置文件 所有文件	config\Mylaraveldaily\file.php
              * 调用
@@ -52,12 +52,12 @@ class TimezonesServiceProvider extends ServiceProvider {
          * assets 例如css js什么的
          * 是网站根目录
          * php artisan vendor:publish --tag=public --force
-         * 发布到 public\Mylaraveldaily\timezones\Mylaraveldaily.css
+         * 发布到 public\Mylaraveldaily\Timezones\Mylaraveldaily.css
          */
         $this->publishes([
-            __DIR__ . '/assets' => public_path('Mylaraveldaily/timezones'),
+            __DIR__ . '/assets' => public_path('Mylaraveldaily/Timezones'),
                 ], 'public');
-        
+
         /*
          * 数据库
          * php artisan vendor:publish --tag=migrations --force

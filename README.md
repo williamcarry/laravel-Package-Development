@@ -6,7 +6,7 @@
 
     'providers' => [
         //...
-        App\Providers\RouteServiceProvider::class,
+        mylaraveldaily\Timezones\TimezonesServiceProvider::class,
 
     ],
     

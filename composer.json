@@ -7,11 +7,6 @@
             "email": "myinfo@laraveldaily.com"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "Laraveldaily\\Timezones\\": "packages/laraveldaily/timezones/src"
-        }
-    },
     "minimum-stability": "dev",
     "require": {}
 }
